@@ -23,13 +23,11 @@ const Home = () => {
         const tags = response.data.flatMap(org => org.tags.split(', '));
         setAllTags([...new Set(tags)]);
       })
-      .catch(error => {
-        console.error('Ошибка при загрузке данных:', error);
-      });
+      .catch(error => console.error('Ошибка при загрузке данных:', error));
   }, []);
 
   // Фильтрация организаций
-  const filteredOrganizations = organizations.filter(org => 
+  const filteredOrganizations = organizations.filter(org =>
     selectedTags.length === 0 || selectedTags.some(tag => org.tags.split(', ').includes(tag))
   );
 
@@ -87,7 +85,7 @@ const Home = () => {
           {filteredOrganizations.map(org => (
             <tr key={org.id}>
               <td>
-                <img src={`http://localhost:8000/uploads/${org.avatar}`} alt="Аватар" width="50" height="50" />
+                <img src={`http://localhost:8000/uploads/${org.avatar}`} alt="Аватар" width="150" height="150" />
               </td>
               <td>{org.email}</td>
               <td>{org.name}</td>
@@ -102,6 +100,12 @@ const Home = () => {
           ))}
         </tbody>
       </table>
+
+      {/* Подвал */}
+      <footer className="footer">
+        <p>подвал</p>
+
+      </footer>
     </div>
   );
 };
