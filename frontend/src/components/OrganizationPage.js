@@ -1,9 +1,10 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './home.css';
 
 function OrganizationPage() {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [organization, setOrganization] = useState(null);
 
     useEffect(() => {
@@ -16,7 +17,14 @@ function OrganizationPage() {
 
     return (
         <div className="organization-container">
-            <h1>{organization.name}</h1>
+            {/* Контейнер для заголовка и кнопки */}
+            <div className="organization-header">
+                <button className="back-button" onClick={() => navigate('/')}>
+                    Вернуться на главную
+                </button>
+                <h1>{organization.name}</h1>
+            </div>
+
             <img 
                 src={`http://127.0.0.1:8000/uploads/${organization.avatar}`} 
                 alt="Логотип" 

@@ -181,3 +181,35 @@ th {
   font-weight: bold;
   color: black;
 }
+.hero-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.hero-button:hover {
+  background-color: #333;
+}
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
