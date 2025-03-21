@@ -27,6 +27,13 @@ try:
         tags="тег4, тег5",
         description="Это описание организации 2."
     ))
+    db.add(Organization(
+        avatar="3.jpg",
+        email="org3@example.com",
+        name="Организация 3",
+        tags="тег4, тег5",
+        description="Это описание организации 3."
+    ))
     db.commit()
     print("Тестовые данные успешно добавлены!")
 except Exception as e:
