@@ -16,23 +16,23 @@ try:
     db.add(Organization(
         avatar="1.jpg",
         email="org1@example.com",
-        name="Организация 1",
+        name="ООО «ЭКРА ИТ»",
         tags="тег1, тег2, тег3",
-        description="Это описание организации 1."
+        description="Это описание организации ООО «ЭКРА ИТ»."
     ))
     db.add(Organization(
         avatar="2.jpg",
         email="org2@example.com",
-        name="Организация 2",
+        name="ООО «Команда F5»",
         tags="тег4, тег5",
-        description="Это описание организации 2."
+        description="Это описание организации ООО «Команда F5»."
     ))
     db.add(Organization(
         avatar="3.jpg",
         email="org3@example.com",
-        name="Организация 3",
+        name="ООО «Кейсистемс»",
         tags="тег4, тег5",
-        description="Это описание организации 3."
+        description="Это описание организации ООО «Кейсистемс»."
     ))
     db.commit()
     print("Тестовые данные успешно добавлены!")

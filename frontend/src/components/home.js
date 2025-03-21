@@ -74,10 +74,11 @@ const Home = () => {
         <thead>
           <tr>
             <th>Аватар</th>
-            <th>Почта</th>
+            {/* <th>Почта</th> */}
             <th>Название</th>
-            <th>Теги</th>
             <th>Описание</th>
+            <th>Теги</th>
+            
             <th>Действие</th>
           </tr>
         </thead>
@@ -87,10 +88,10 @@ const Home = () => {
               <td>
                 <img src={`http://localhost:8000/uploads/${org.avatar}`} alt="Аватар" width="150" height="150" />
               </td>
-              <td>{org.email}</td>
+              {/* <td>{org.email}</td> */}
               <td>{org.name}</td>
-              <td>{org.tags}</td>
               <td>{org.description}</td>
+              <td>{org.tags}</td> 
               <td>
                 <Link to={`/organization/${org.id}`}>
                   <button>Подробнее</button>
@@ -100,8 +101,6 @@ const Home = () => {
           ))}
         </tbody>
       </table>
-
-      {/* Подвал */}
       <footer className="footer">
         <p>подвал</p>
 
