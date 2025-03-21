@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './home.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [organizations, setOrganizations] = useState([]);
@@ -40,12 +41,6 @@ const Home = () => {
   // Удаление выбранного тега
   const removeTag = (tag) => {
     setSelectedTags(prev => prev.filter(t => t !== tag));
-  };
-
-  // Обработчик нажатия на кнопку
-  const handleButtonClick = (orgId) => {
-    alert(`Нажата кнопка для организации с ID: ${orgId}`);
-    // Здесь можно добавить логику, например, открыть модальное окно или удалить организацию
   };
 
   return (
@@ -120,12 +115,9 @@ const Home = () => {
               <td>{org.tags}</td>
               <td>{org.description}</td>
               <td>
-                <button
-                  className="action-button"
-                  onClick={() => handleButtonClick(org.id)}
-                >
-                  Подробнее
-                </button>
+              <Link to={`/organization/${org.id}`}>
+                <button>Подробнее</button>
+              </Link>
               </td>
             </tr>
           ))}

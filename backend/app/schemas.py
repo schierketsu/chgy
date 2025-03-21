@@ -14,4 +14,7 @@ class Organization(OrganizationBase):
     id: int
 
     class Config:
-        from_attributes = True  # Заменяем orm_mode на from_attributes
+        from_attributes = True  # Заменяет orm_mode
+
+class OrganizationResponse(Organization):
+    pass
